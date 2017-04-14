@@ -3,15 +3,14 @@ const slider = app.querySelector(".slider");
 const next = app.querySelector(".next");
 const prev = app.querySelector(".prev");
 const pics = [];
-
+const images = 20;
 let count = 0;
-const photos = 4;
 
-const addContent = () => {
-      for (let i = 0; i < photos; i++) {
+const addImages = () => {
+      for (let i = 0; i < images; i++) {
         const render =
         `<div class="pics">
-          <img src="https://source.unsplash.com/random?sig=${i}" alt="pic${i + 1}/1440x720">
+          <img src="https://source.unsplash.com/random?sig=${i}" alt="pic${i + 1}/1980x1080">
         </div>`;
 
         slider.insertAdjacentHTML("beforeend", render);
@@ -19,10 +18,9 @@ const addContent = () => {
       pics.push(...app.querySelectorAll(".pics"));
 };
 
-
 const slide = {
       next: () => {
-        if (count === photos - 1){
+        if (count === images - 1){
           count = 0;
           pics.forEach(i => i.style.transform = `translateX(0)`);
         }
@@ -33,8 +31,8 @@ const slide = {
       },
       prev: () => {
         if (count === 0) {
-          count = photos - 1;
-          pics.forEach(i => i.style.transform = `translateX(${-100 * (photos - 1)}%)`);
+          count = images - 1;
+          pics.forEach(i => i.style.transform = `translateX(${-100 * (images - 1)}%)`);
         }
         else {
           count--;
@@ -46,6 +44,6 @@ const slide = {
 next.addEventListener('click', slide.next);
 prev.addEventListener('click', slide.prev);
 
-const interval = setInterval(slide.next, 5000);
+const interval = setInterval(slide.next, 10000);
 
-window.onload = addContent;
+window.onload = addImages;

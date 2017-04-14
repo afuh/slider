@@ -1,36 +1,58 @@
-@import "./sass/_settings"
+@import "normalize"
+
+*
+  box-sizing: border-box
+  list-style-type: none
+  text-decoration: none
+
+body
+  padding: 0
+  margin: 0 auto
+
+ul
+  padding-left: 0
+  margin: 0
+
+body
+  background: whitesmoke
 
 #app
   position: relative
-  margin: 10% auto
-  width: 80%
-  max-width: 1440px
+  margin: 0 auto
+  max-width: 1920px
+  // width: 90%
 
 .slider
-  background: black
+  background: #000
+  height: 100vh
+  max-height: 1080px
   display: flex
   flex-flow: row nowrap
-  height: 60vh
   overflow: hidden
 
 .btns
+  width: 20%
+  height: 100%
   display: flex
   justify-content: center
   align-items: center
-  color: white
+  color: whitesmoke
   position: absolute
-  bottom: 45%
-  font-size: 60px
+  bottom: 0
+  font-size: 20px
   cursor: pointer
-  opacity: 0.1
+  transition: all 0.5s
+  opacity: 0
   &:hover
-    opacity: 1
+    opacity: 0.9
 
 .next
-  right: 2%
+  background: linear-gradient(to left, rgba(black, 0.6) 10%, rgba(black, 0))
+  right: 0
 
 .prev
-  left: 2%
+  background: linear-gradient(to right, rgba(black, 0.6) 10%, rgba(black, 0))
+  left: 0
 
 .pics
   flex: 1 0 auto
