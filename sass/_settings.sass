@@ -1,0 +1,33 @@
+@import "normalize"
+@import "_palette"
+
+$family: 'Lucida Grande', sans-serif
+
+*
+  box-sizing: border-box
+  list-style-type: none
+  text-decoration: none
+
+body
+  /* optional */
+  font-family: $family
+  line-height: 1.15
+  padding: 0
+  margin: 0 auto
+  max-width: 1920px
+
+button, input, optgroup, select, textarea
+  font:
+    family: $family
+    size: 100%
+    line-height: 1.15
+    margin: 0
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  appearance: none
+  margin: 0
+
+ul
+  padding-left: 0
+  margin: 0

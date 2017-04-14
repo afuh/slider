@@ -1,0 +1,45 @@
+@import "./sass/_settings"
+
+#app
+  position: relative
+  margin: 10% auto
+  width: 80%
+  max-width: 1440px
+
+.slider
+  background: black
+  display: flex
+  flex-flow: row nowrap
+  height: 60vh
+  overflow: hidden
+
+.btns
+  display: flex
+  justify-content: center
+  align-items: center
+  color: white
+  position: absolute
+  bottom: 45%
+  font-size: 60px
+  cursor: pointer
+  opacity: 0.1
+  &:hover
+    opacity: 1
+
+.next
+  right: 2%
+
+.prev
+  left: 2%
+
+.pics
+  flex: 1 0 auto
+  width: 100%
+  height: 100%
+  transition: transform 1.5s ease
+  display: flex
+  align-items: center
+  img
+    display: block
+    width: 100%
+    height: auto
